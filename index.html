@@ -1,40 +1,382 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Principles of Software Engineering</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/beige.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<style>
+		section {
+			display: flex;
+			text-align: start;
+		}
+
+		.page-main {
+			text-align: center;
+		}
+
+		.page-main img {
+			width: 500px;
+			height: 282px;
+			margin-top: 20px;
+		}
+
+		.page-title {
+			padding-left: 13%;
+		}
+
+		.page-title h2 {
+			font-size: 130px;
+		}
+
+		.page-quote p:last-child,
+		.page-quote ul {
+			font-size: 34px;
+			font-style: italic;
+			margin-top: 55px;
+		}
+
+		.page-float-img img {
+			height: 236px;
+			float: left;
+			margin: 36px;
+		}
+
+		.page-float-img p {
+			font-size: 30px;
+		}
+
+		.page-right-img img {
+			float: right;
+			width: 50%;
+			margin: 0 4%;
+			;
+		}
+
+		.page-right-img p {
+			font-size: 30px;
+		}
+
+		.page-text p {
+			font-size: 30px;
+		}
+
+		.page-text ul {
+			margin: 22px;
+			font-size: 26px;
+		}
+
+		.page-text span {
+			font-weight: 700;
+		}
+
+		.page-text img {
+			margin-left: 50%;
+			width: 232px;
+		}
+
+		.top-distance {
+			top: 60px !important;
+		}
+
+		.top-distance-big {
+			top: 100px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section class="page-main">
+				<h2>Principles of Software Development</h2>
+				<img src="https://i.ytimg.com/vi/0qP6Vh8GNM0/maxresdefault.jpg" alt="principles">
+
+			</section>
+			<section class="page-title">
+				<h2>yagni</h2>
+				<h5>"You Ain't Gonna Need It"</h5>
+			</section>
+			<section class="page-quote top-distance-big">
+				<p>YAGNI, or "You Ain't Gonna Need It" (or "You Aren't Gonna Need It"), emerged as one of the key
+					principles of Extreme Programming. Put another way, the principle states:</p>
+				<p>"Always implement things when you actually need them, never when you just foresee that you may need
+					them."</p>
+			</section>
+			<section class="page-float-img top-distance-big">
+				<img src="https://miro.medium.com/max/875/1*uvlfqAYf9mbgUXPCPwwIFw.png" alt="yagni-principle">
+				<p>Even if you are totally sure that you will need a feature or piece of code later on, do not implement
+					it now. Most likely, you will not need it after all or what you actually need is quite different
+					from what you foresaw needing earlier.</p>
+			</section>
+			<section class="page-right-img top-distance-big">
+				<img src="https://miro.medium.com/max/1062/1*B0PHI-pzQWZD7xK2oAtETg.png" alt="yagni">
+				<h3>Involved Costs</h3>
+				<h5>Whatever the outcome, you will incur a series of costs that can be either avoided or deferred:</h5>
+			</section>
+			<section class="page-text top-distance">
+				<h4>Factors in the YAGNI Principle</h4>
+				<p>Which factors or questions are there in the course of the YAGNI principle that support developers in
+					making the right decision? Here is a selection:</p>
+				<ul>
+					<li>Is it 100% sure that the implementation is needed?</li>
+					<li>What are the investment costs?</li>
+					<li>How long does the implementation take?</li>
+					<li>What are the opportunity costs?</li>
+				</ul>
+				<p>Often such questions cannot be answered immediately. One of the reasons for this is that statements
+					about the future are fundamentally difficult and cannot be easily quantified.</p>
+			</section>
+			<section class="page-text top-distance">
+				<h4>Advantages of the YAGNI Principle</h4>
+				<p>If only those requirements are realised which have to be implemented clearly, there are some
+					advantages:</p>
+				<ul>
+					<li>A feature creep is avoided.</li>
+					<li>No bloatware is created, i.e. software with functions that are hardly used or not used at all.
+					</li>
+					<li>Functions that are not implemented do not have to be tested, documented and supported. Thus
+						there is no (unnecessary) effort.</li>
+					<li>The profit increases, because the effort for the implementation of allegedly needed functions is
+						eliminated.</li>
+					<li>The code base remains “leaner” and is therefore easier to maintain.</li>
+				</ul>
+			</section>
+			<section class="page-title">
+				<h2>KISS</h2>
+				<h5>"Keep It Simple and Stupid"</h5>
+			</section>
+			<section class="page-quote">
+				<p>Simple in this context doesn’t necessarily mean easy, It simply means producing the same results or a
+					better result with less effort or complexity.</p>
+				<p>In the concept of KISS, we neither want just less nor more, we simply wish to have only as much as is
+					required.</p>
+			</section>
+			<section class="page-right-img top-distance-big">
+				<img src="https://p7x7q5i4.rocketcdn.me/en/wp-content/uploads/sites/2/2019/12/kiss-principle.jpg"
+					alt="kiss">
+				<h5>If you’re building a product that moves an object from point A to point B, then do that as
+					efficiently as possible, while having simplicity at the back of your mind.</h5>
+			</section>
+			<section class="page-text top-distance-big">
+				<p>In the programming context, there are a few points to note whenever we want to reduce complexity.</p>
+				<ul>
+					<li>Ensure your variable names describes the variable it holds properly.</li>
+					<li>Ensure your method names translates to the purpose of that method.</li>
+					<li>Write comments within your method where necessary.</li>
+					<li>Ensure your classes has a single responsibility.</li>
+					<li>Avoid global states and behaviors like as much as you can.</li>
+					<li>Delete instances, methods or redundant processes within the code base that are not in use.</li>
+				</ul>
+			</section>
+			<section class="page-text">
+				<p>Why is the KISS principle important in programming?</p>
+				<ul>
+					<li>One major challenge Developers face is working on an existing code base. But when the KISS
+						principle is applied it tackles that issue.</li>
+					<li>The KISS principle facilitates continuity when needed and gives room for other people to
+						understand the process.</li>
+					<li>Simpler processes allow for greater efficiency in automated testing. It is easier to test a
+						simple system than a complex one.</li>
+				</ul>
+				<img src="https://ameyaoak.files.wordpress.com/2015/09/kiss-sleeping-man.gif" alt="kiss">
+			</section>
+			<section class="page-float-img top-distance">
+				<img src="https://i.stack.imgur.com/G5ZO6.png" alt="kiss-yagni">
+				<p>The YAGNI Principle and the KISS Principle complement each other. The KISS Principle – Keep It Simple
+					and Stupid – looks for the simplest possible solution to a problem. “Everyone can do complicated”,
+					but the art lies in the simplicity of a solution. The YAGNI Principle complements KISS by asking the
+					question “do we really need this” and thus steering the answer in the direction of avoiding effort.
+				</p>
+			</section>
+			<section class="page-title">
+				<h2>DRY</h2>
+				<h5>"Don't Repeat Yourself"</h5>
+			</section>
+			<section class="page-quote">
+				<p>The DRY (Don't Repeat Yourself) Principle states:</p>
+				<p>"Every piece of knowledge must have a single, unambiguous, authoritative representation within a
+					system."</p>
+			</section>
+			<section class="page-text">
+				<p>Why DRY?</p>
+				<ul>
+					<li>Write code once, use it often.</li>
+					<li>Change code in one place, see the change in all instances.</li>
+					<li>Less code is good: It saves time and effort, is easy to maintain, and also reduces the chances
+						of bugs.</li>
+					<img src="https://thevaluable.dev/images/2018/02/repeat-yourself.webp" alt="dry">
+				</ul>
+			</section>
+			<section class="page-right-img">
+				<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--PjiL0ozO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h95scpm8mulyyts1ie1d.jpg"
+					alt="dry">
+				<h3>DRY Violations</h3>
+				<h5>Writing/ Copying and pasting the same code or logic again and again.</h5>
+			</section>
+			<section class="page-title">
+				<h2>SOLID</h2>
+				<h6>S — Single responsibility principle</h6>
+				<h6>O — Open-closed principle</h6>
+				<h6>L — Liskov substitution principle</h6>
+				<h6>I — Interface segregation principle</h6>
+				<h6>D — Dependency inversion principle</h6>
+			</section>
+			<section class="page-quote">
+				<h4>S - Single-responsiblity Principle</h4>
+				<p>Single-responsibility Principle (SRP) states:</p>
+				<p>A class should have one and only one reason to change, meaning that a class should have
+					only one job.
+				</p>
+			</section>
+			<section class="page-right-img top-distance-big">
+				<img src="https://miro.medium.com/max/4800/1*P3oONz9Da3Tc1w97fMV73Q.png" alt="solid">
+				<p>If a Class has many responsibilities, it increases the possibility of bugs because making changes to
+					one of its responsibilities, could affect the other ones without you knowing.
+				</p>
+			</section>
+			<section class="page-float-img">
+				<img src="https://miro.medium.com/max/903/1*1funDIH0LF3KaAOICcxuSw.png" alt="solid">
+				<h3>Goal</h3>
+				<h5>This principle aims to separate behaviours so that if bugs arise as a result of your change, it
+					won’t affect other unrelated behaviours.
+				</h5>
+			</section>
+			<section class="page-quote">
+				<h4>O — Open-closed principle</h4>
+				<p>Open-closed Principle (OCP) states:</p>
+				<p>Objects or entities should be open for extension but closed for modification.</p>
+			</section>
+			<section class="page-right-img">
+				<img src="https://miro.medium.com/max/4800/1*0MtFBmm6L2WVM04qCJOZPQ.png" alt="solid">
+				<p>Changing the current behaviour of a Class will affect all the systems using that Class.</p>
+				<p>If you want the Class to perform more functions, the ideal approach is to add to the functions that
+					already exist NOT change them.</p>
+			</section>
+			<section class="page-float-img">
+				<img src="https://www.overcoded.net/wp-content/uploads/717/open-closed-principle-solid-banner-overcoded.jpg"
+					alt="solid">
+				<h3>Goal</h3>
+				<h5>This principle aims to extend a Class’s behaviour without changing the existing behaviour of that
+					Class. This is to avoid causing bugs wherever the Class is being used.
+				</h5>
+			</section>
+			<section class="page-quote">
+				<h4>L — Liskov substitution principle</h4>
+				<p>Liskov Substitution Principle states:</p>
+				<p>If S is a subtype of T, then objects of type T in a program may be replaced with objects of type S
+					without altering any of the desirable properties of that program.
+				</p>
+			</section>
+			<section class="page-text">
+				<p>When a child Class cannot perform the same actions as its parent Class, this can cause bugs.</p>
+				<p>If you have a Class and create another Class from it, it becomes a parent and the new Class becomes a
+					child. The child Class should be able to do everything the parent Class can do. This process is
+					called Inheritance.</p>
+				<p>The child Class should be able to process the same requests and deliver the same result as the parent
+					Class or it could deliver a result that is of the same type.</p>
+			</section>
+			<section class="page-right-img top-distance">
+				<img src="https://miro.medium.com/max/5200/1*yKk2XKJaCLNlDxQMx1r55Q.png" alt="solid">
+				<p>The picture shows that the parent Class delivers Coffee(it could be any type of coffee). It is
+					acceptable for the child Class to deliver Cappucino because it is a specific type of Coffee, but it
+					is NOT acceptable to deliver Water.</p>
+				<p>If the child Class doesn’t meet these requirements, it means the child Class is changed completely
+					and violates this principle.</p>
+			</section>
+			<section class="page-float-img">
+				<img src="https://miro.medium.com/max/7894/1*iV_TeHoEDE0TwhQEFj2fxA.png" alt="solid">
+				<h3>Goal</h3>
+				<h5>This principle aims to enforce consistency so that the parent Class or its child Class can be used
+					in the same way without any errors.
+				</h5>
+			</section>
+			<section class="page-quote">
+				<h4>I — Interface segregation principle</h4>
+				<p>Interface segregation principle states:</p>
+				<p>A client should never be forced to implement an interface that it doesn’t use, or clients shouldn’t
+					be forced to depend on methods they do not use.
+				</p>
+			</section>
+			<section class="page-right-img top-distance-big">
+				<img src="https://miro.medium.com/max/5200/1*2hmyR9L43Vm64MYxj4Y89w.png" alt="interface-segregation">
+				<p>When a Class is required to perform actions that are not useful, it is wasteful and may produce
+					unexpected bugs if the Class does not have the ability to perform those actions.</p>
+				<p>A Class should perform only actions that are needed to fulfil its role. Any other action should be
+					removed completely or moved somewhere else if it might be used by another Class in the future.</p>
+			</section>
+			<section class="page-float-img">
+				<img src="https://miro.medium.com/max/7894/1*YzBpqn1XSHOz9UpKc6HcJg.png" alt="interface-segregation">
+				<h3>Goal</h3>
+				<h5>This principle aims at splitting a set of actions into smaller sets so that a Class executes ONLY
+					the set of actions it requires.
+				</h5>
+			</section>
+			<section class="page-quote">
+				<h4>D — Dependency inversion principle</h4>
+				<p>Dependency inversion principle states:</p>
+				<ul>
+					<li>High-level modules should not depend on low-level modules. Both should depend on the
+						abstraction.</li>
+					<li>Abstractions should not depend on details. Details should depend on abstractions.</li>
+				</ul>
+			</section>
+			<section class="page-text">
+				<p>Let’s define the terms used here more simply</p>
+				<ul>
+					<li><span>High-level Module(or Class):</span> Class that executes an action with a tool.</li>
+					<li><span>Low-level Module (or Class):</span> The tool that is needed to execute the action</li>
+					<li><span>Abstraction:</span> Represents an interface that connects the two Classes.</li>
+					<li><span>Details:</span> How the tool works</li>
+				</ul>
+				<img src="https://blog.ndepend.com/wp-content/uploads/DIP.png" alt="dependency-inversion">
+			</section>
+			<section class="page-right-img top-distance-big">
+				<img src="https://miro.medium.com/max/5200/1*Qk8tDmjQlyvwKxNTfXIo0Q.png" alt="dependency-inversion">
+				<p>This principle says a Class should not be fused with the tool it uses to execute an action. Rather,
+					it should be fused to the interface that will allow the tool to connect to the Class.</p>
+				<p>It also says that both the Class and the interface should not know how the tool works. However, the
+					tool needs to meet the specification of the interface.</p>
+			</section>
+			<section class="page-float-img">
+				<img src="https://i.ytimg.com/vi/ykGW0Zen0YY/maxresdefault.jpg" alt="dependency-inversion">
+				<h3>Goal</h3>
+				<h5>This principle aims at reducing the dependency of a high-level Class on the low-level Class by
+					introducing an interface.
+				</h5>
+			</section>
+			<section class="page-main">
+				<h3>Conclusion</h3>
+				<h5>Projects that adhere to SOLID principles can be shared with collaborators, extended, modified,
+					tested, and refactored with fewer complications.
+				</h5>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
 </html>
